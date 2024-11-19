@@ -1,38 +1,16 @@
 # Ex-11 Mini Project: Pelmanism_Game
+### Date: 25/10/2024
+### REGISTER NUMBER : 212223230223
 ## Aim:
-This code implements a memory-matching game, also known as "Pelmanism" or simply a memory game. In this version, the game allows a player to compete against an AI to find all matching pairs of animal images on a 4x4 grid. Here's a breakdown of the code and how it implements the game:</br>
+This code implements a memory-matching game, also known as "Pelmanism" or simply a memory game. </br>
 
 ## Algorithm:
-### 1) Setup and Initialization:
-The game is configured to use a 4x4 grid, with each tile holding an animal image. These images are loaded from the assets directory, which must contain at least eight distinct .png files for the game to run.</br></br>
-The game will start by loading all images and pairing them up randomly across the grid.
-### 2) Class Definition (Animal):
-
-The Animal class is responsible for each tile on the board, representing an animal image. Each image appears exactly twice in the game.</br></br>
-When an Animal object is created, it picks a random animal image that hasn't yet reached its pair limit.
-### 3) Gameplay Functions:
-     i) find_index_from_xy(): Converts mouse coordinates to the grid’s row and column indices.</br></br>
-     ii) draw_winner_screen(): Displays the winning message, comparing player and AI times.</br></br>
-     iii)ai_turn(): Randomly selects two tiles for the AI’s turn.</br></br>
-     iv)display_time(): Shows the elapsed time for the player.</br>
-### 4) Game Loop (main()):
-
-i)The main game loop handles player and AI turns:</br></br>
-     a) Player Turn: The player clicks on two tiles to reveal them. If they match, they stay revealed; otherwise, they are hidden after a short pause.</br></br>
-     b) AI Turn: The AI picks two random tiles and checks for a match.
-
-</br> ii)This continues until all pairs are found, and the game ends, showing the total times for both the player and the AI.</br>
-### 5) Winner Determination and Time Plotting:
-
-After all pairs are matched, the function draw_winner_screen() determines the winner based on who finished in less time.</br>
-The plot_time_comparison() function displays a bar chart comparing the player's and AI's times.</br>
-### 6) Menu Screen:
-draw_menu_screen(): A simple menu function to display a selection for the game's level, though only one level (4x4) is currently implemented.</br>
-## Running the Game:
-To run the game, ensure:
-</br></br>
-     a)The assets directory exists with at least eight .png images.</br>
-     b)Pygame and Matplotlib libraries are installed.
+1)Setup and Initialization: Load 8 paired animal images onto a 4x4 grid.</br>
+2)Animal Class: Manages tiles, ensuring each animal appears twice.</br>
+3)Gameplay Functions: Includes mouse-to-grid mapping, winner display, AI moves.</br>
+4)Game Loop: Players and AI alternately reveal and match tile pairs.</br>
+5)Winner and Plotting: Determines winner; plots player vs. AI time graph.</br>
+6)Menu Screen: Displays level selection; only 4x4 mode available.</br>
 ## Program Code:
 ```py
 import pygame
